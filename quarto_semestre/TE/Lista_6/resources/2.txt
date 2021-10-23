@@ -1,0 +1,3 @@
+Banana 12.5
+Maçã 1.10
+Abacaxi 3.0
