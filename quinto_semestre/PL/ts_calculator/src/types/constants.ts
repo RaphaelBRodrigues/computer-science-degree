@@ -1,0 +1,1 @@
+export const OPERATION_LIST = ["Sum", "Subraction", "Division"];

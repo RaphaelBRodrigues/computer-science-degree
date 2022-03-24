@@ -1,0 +1,17 @@
+{
+  "name": "ts_calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts || npx tururu",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "raphaelbarbosa.rodrigues@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  }
+}
