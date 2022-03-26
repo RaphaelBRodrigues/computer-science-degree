@@ -1,4 +1,4 @@
-import UserInterface from "./UserInterface";
+import UserInterface from './UserInterface';
 
 /**
  * Calculator main entry
@@ -15,6 +15,6 @@ class Main {
   init() {
     this.userInterface.showMenu();
   }
-};
+}
 
 new Main();
