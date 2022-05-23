@@ -4,7 +4,7 @@ USE musical_store;
 # Loja 
 
 CREATE TABLE loja(
-	id_loja int NOT NULL,
+	id_loja int NOT NULL AUTO_INCREMENT,
     razao_social varchar(90),
     cnpj varchar(90),
     PRIMARY KEY (id_loja) 
@@ -18,7 +18,7 @@ CREATE TABLE pdv(
 );
 
 CREATE TABLE endereco_pdv(
-	id_pdv int NOT NULL,
+	id_pdv int NOT NULL AUTO_INCREMENT,
     rua varchar(90),
     numero integer,
     complemento varchar(90),
@@ -27,7 +27,7 @@ CREATE TABLE endereco_pdv(
 );
 
 CREATE TABLE telefones_pdv(
-	id_pdv int NOT NULL,
+	id_pdv int NOT NULL AUTO_INCREMENT,
     numero varchar(90),
     FOREIGN KEY(id_pdv) REFERENCES pdv(id_pdv)
 );
@@ -43,13 +43,13 @@ CREATE TABLE cliente(
 );
 
 CREATE TABLE telefones_cliente(
-	id_cliente int NOT NULL,
+	id_cliente int NOT NULL AUTO_INCREMENT,
     numero varchar(90),
     FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente)
 );
 
 CREATE TABLE endereco_cliente(
-	id_cliente int NOT NULL,
+	id_cliente int NOT NULL AUTO_INCREMENT,
     rua varchar(90),
     numero integer,
     complemento varchar(90),
@@ -60,7 +60,7 @@ CREATE TABLE endereco_cliente(
 # Vendedor
 
 CREATE TABLE vendedor(
-	id_vendedor int NOT NULL,
+	id_vendedor int NOT NULL AUTO_INCREMENT,
     nome varchar(90),
     email varchar(120),
     cpf varchar(16),
@@ -68,13 +68,13 @@ CREATE TABLE vendedor(
 );
 
 CREATE TABLE telefones_vendedor(
-	id_vendedor int NOT NULL,
+	id_vendedor int NOT NULL AUTO_INCREMENT,
     numero varchar(90),
     FOREIGN KEY(id_vendedor) REFERENCES vendedor(id_vendedor)
 );
 
 CREATE TABLE endereco_vendedor(
-	id_vendedor int NOT NULL,
+	id_vendedor int NOT NULL AUTO_INCREMENT,
     rua varchar(90),
     numero integer,
     complemento varchar(90),
@@ -85,7 +85,7 @@ CREATE TABLE endereco_vendedor(
 # Fornecedor
 
 CREATE TABLE fornecedor(
-	id_fornecedor int NOT NULL,
+	id_fornecedor int NOT NULL AUTO_INCREMENT,
     nome varchar(90) UNIQUE,
     email varchar(120),
     cnpj varchar(25),
@@ -93,13 +93,13 @@ CREATE TABLE fornecedor(
 );
 
 CREATE TABLE telefones_fornecedor(
-	id_fornecedor int NOT NULL,
+	id_fornecedor int NOT NULL AUTO_INCREMENT,
     numero varchar(90),
     FOREIGN KEY(id_fornecedor) REFERENCES fornecedor(id_fornecedor)
 );
 
 CREATE TABLE endereco_fornecedor(
-	id_fornecedor int NOT NULL,
+	id_fornecedor int NOT NULL AUTO_INCREMENT,
     numero integer,
     complemento varchar(90),
     bairro varchar(90),
@@ -109,13 +109,13 @@ CREATE TABLE endereco_fornecedor(
 # Instrumento
 
 CREATE TABLE categoria(
-	id_categoria int NOT NULL,
+	id_categoria int NOT NULL AUTO_INCREMENT,
     nome varchar(90),
     PRIMARY KEY(id_categoria)
 );
 
 CREATE TABLE material(
-	id_material int NOT NULL,
+	id_material int NOT NULL AUTO_INCREMENT,
     nome varchar(90),
     colocaracao varchar(90),
     PRIMARY KEY(id_material)
@@ -123,7 +123,7 @@ CREATE TABLE material(
 
 
 CREATE TABLE instrumento(
-	id_instrumento int NOT NULL,
+	id_instrumento int NOT NULL AUTO_INCREMENT,
     modelo varchar(90),
     preco double,
     id_categoria int,
