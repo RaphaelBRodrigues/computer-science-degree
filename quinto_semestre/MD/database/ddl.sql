@@ -35,7 +35,7 @@ CREATE TABLE telefones_pdv(
 # Cliente
 
 CREATE TABLE cliente(
-	id_cliente int NOT NULL,
+	id_cliente int NOT NULL AUTO_INCREMENT,
     nome varchar(90),
     email varchar(120),
     cpf varchar(16),
