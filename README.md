@@ -11,6 +11,5 @@ This repository is dedicated to my degree in computer science and contain conten
 * [PL: Paradigmas de Programação](quinto_semestre/PL)
   * Golang
   * TypeScript
- 
 * [CG - Computação Gráfica](sexto_semestre/CG)
- * Python
+  * Python
