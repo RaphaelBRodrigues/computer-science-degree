@@ -13,3 +13,5 @@ This repository is dedicated to my degree in computer science and contain conten
   * TypeScript
 * [PS: Projeto de Software](sexto_semestre/PS)
   * Java
+* [CG - Computação Gráfica](sexto_semestre/CG)
+  * Python
