@@ -1,3 +1,5 @@
+; Somando items de dois arrays
+
 .code
 LOOP: LDA pont1,I
       STA pontres,I
