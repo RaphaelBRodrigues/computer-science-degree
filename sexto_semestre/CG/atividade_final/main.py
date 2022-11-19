@@ -147,7 +147,7 @@ while True:
         0, 0))  # Faço o Bit Blit na imagem no ponto 0,0 do plano definimo, com isso consigo inserir a imagem no jogo.
         grupo_geral.draw(superficie)
 
-        if (morte < 0):
+        if (morte < 1):
             grupo_inimigo.draw(superficie)
             grupo_inimigo.update()
             disparo = 0
