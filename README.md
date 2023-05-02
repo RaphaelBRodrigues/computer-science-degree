@@ -17,7 +17,7 @@ This repository is dedicated to my degree in computer science and contain conten
   * Python
 * [AC - Arquitetura de Computadores](sexto_semestre/AC)
   * Assembly
-* [IA - Inteligência Artificial](sexto_semestre/IA)
+* [IA - Inteligência Artificial](setimo_semestre/IA)
   * Javascript
-* [CP - Compiladores](sexto_semestre/CP)
+* [CP - Compiladores](setimo_semestre/CP)
   * Javascript
