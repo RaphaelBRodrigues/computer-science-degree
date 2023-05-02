@@ -1,19 +1,13 @@
 const fs = require("fs")
 
 class ReadFile {
-    filepath = "";
-
-    constructor(filepath) {
-        this.filepath = filepath;
-    }
-
-    async execute() {
+    async getFileContent(filepath) {
         const fileContent = await new Promise(resolve => {
-            fs.readFile(this.filepath,(_, data) => {
+            fs.readFile(filepath, (_, data) => {
                 resolve(data.toString());
             })
-        }) 
-        
+        })
+
         return fileContent;
     }
 }
