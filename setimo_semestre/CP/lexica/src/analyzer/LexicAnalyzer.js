@@ -15,13 +15,13 @@ class LexicAnalyzer {
 
   #analyze(text) {
     const programTokens = this.#extractTokens(text);
-    console.log({ programTokens })
+
     const result = programTokens.every((programToken) => {
       const tokenAnalyze = AvailableTokens.some(({ regex }) => {
         return regex.test(programToken);
       })
 
-      console.log({ programToken, tokenAnalyze })
+
       return tokenAnalyze;
     })
 
