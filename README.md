@@ -21,3 +21,5 @@ This repository is dedicated to my degree in computer science and contain conten
   * Javascript
 * [CP - Compiladores](setimo_semestre/CP)
   * Javascript
+* [SD - Sistemas Distríbuidos](oitvao_semestre/SD)
+  * C
