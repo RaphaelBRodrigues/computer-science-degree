@@ -1,43 +1,31 @@
 #include <stdio.h>
 #include <constants.h>
 
-struct message
-{
-    long source;
-    long operation_token;
-    int first_number;
-    int second_number;
-};
-
 void main(void)
 {
-    int PORT = 213;
-
-    struct message m1;
+    struct Message message;
     int result = 0;
 
     while (1)
     {
-        receive(PORT, &m1);
-        switch (m1.operation_token)
+        receive(SERVER_PORT, &message);
+
+        switch (message.operationToken)
         {
-        case SUM:
-            result = m1.first_number + m1.second_number;
+        case SUM_CODE:
+            result = message.firstNumber + message.secondNumber;
             break;
-        case SUB:
-            result = m1.first_number - m1.second_number;
+        case SUBTRACTION_CODE:
+            result = message.firstNumber - message.secondNumber;
             break;
-        case DIV:
-            result = m1.first_number / m1.second_number;
+        case DIVISON_CODE:
+            result = message.firstNumber / message.secondNumber;
             break;
-        case MULT:
-            result = m1.first_number * m1.second_number;
-            break;
-        default:
-            result = E_BAD_OPCODE;
+        case MULTIPLICATION_CODE:
+            result = message.firstNumber * message.secondNumber;
             break;
         }
 
-        send(m1.source, result);
+        send(message.source, result);
     }
 }
